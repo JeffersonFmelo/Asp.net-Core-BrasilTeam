@@ -1,0 +1,41 @@
+﻿@model BrasilTeamMVC.Models.Brasil
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Editar</h1>
+
+<h4>Brasil</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="NumeroJogador" class="control-label"></label>
+                <input asp-for="NumeroJogador" class="form-control" />
+                <span asp-validation-for="NumeroJogador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NomeJogador" class="control-label"></label>
+                <input asp-for="NomeJogador" class="form-control" />
+                <span asp-validation-for="NomeJogador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PosicaoJogador" class="control-label"></label>
+                <input asp-for="PosicaoJogador" class="form-control" />
+                <span asp-validation-for="PosicaoJogador" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
